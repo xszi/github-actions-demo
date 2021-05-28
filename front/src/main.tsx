@@ -1,6 +1,6 @@
 import React from 'react'
 import ReactDOM from 'react-dom'
-import './assets/styles/global.scss'
+// import './assets/styles/global.scss'
 import 'antd/dist/antd.css'
 import { ConfigProvider } from 'antd'
 import zh_CN from 'antd/lib/locale-provider/zh_CN'

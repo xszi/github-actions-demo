@@ -17,12 +17,12 @@ interface IRouteConfigProps {
     component: any;
     exact?: boolean;
     meta?: IMetaProps;
-    redirect: IRedirectProps;
+    redirect?: IRedirectProps;
     [propName: string]: any;
 }
 
 interface IChildrenRouteProps {
-    childrenRoutes: Array<IRouteConfigProps>
+    childrenRoutes?: Array<IRouteConfigProps>
 }
 
 export interface IRouteProps extends IRouteConfigProps, IChildrenRouteProps {}

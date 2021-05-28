@@ -12,15 +12,20 @@
         "@ant-design/icons": "^4.6.2",
         "@toast-ui/editor": "^2.5.2",
         "antd": "^4.15.6",
+        "axios": "^0.21.1",
+        "blueimp-md5": "^2.18.0",
         "lodash": "^4.17.21",
         "moment": "^2.29.1",
+        "query-string": "^7.0.0",
         "react": "^17.0.0",
         "react-dom": "^17.0.0",
         "react-redux": "^7.2.4",
         "react-router-dom": "^5.2.0",
-        "redux-thunk": "^2.3.0"
+        "redux-thunk": "^2.3.0",
+        "sass": "^1.34.0"
     },
     "devDependencies": {
+        "@types/blueimp-md5": "^2.18.0",
         "@types/lodash": "^4.14.170",
         "@types/node": "^15.6.1",
         "@types/react": "^17.0.0",
