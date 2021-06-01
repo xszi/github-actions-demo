@@ -10,7 +10,7 @@ const CONFIG = {
     title: 'Tomato Work',
     // 服务地址
     http: {
-        baseURL: isDevelopment ? 'http://localhost:7003/api'
+        baseURL: isDevelopment ? ''
         : 'http://wangjiuhua.com/api'
     },
     github: {

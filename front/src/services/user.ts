@@ -2,7 +2,7 @@ import http from '@/utils/http'
 
 // 通过账号密码登录
 export function serviceLogin(data: object) {
-  return http.post('/passport/local', data)
+  return http.post('/api/login', data)
 }
 
 // 通过token登录
