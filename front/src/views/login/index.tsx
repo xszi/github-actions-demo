@@ -36,7 +36,6 @@ const PopoverContent = (
     </div>
 )
 
-// let captcha = randomCode()
 
 const LOGIN_NAME = window.localStorage.getItem(LOCAL_STORAGE.LOGIN_NAME) || ''
 
@@ -44,7 +43,6 @@ const captchaUrl = config.http.baseURL + '/api/captcha'
 
 
 function reloadCaptcha(e: any) {
-    // captcha = randomCode()
     const url = captchaUrl
     e.target.src = url
 }
@@ -69,13 +67,16 @@ const LoginPage: React.FC<LoginProps> = function ({
             serviceLogin({
                 loginName: values.loginName.trim(),
                 password: md5(values.password.trim()),
-                code: values.code.trim()
+                code: values.code.trim().toLowerCase()
             })
                 .then(res => {
                     setLoading(false)
                     if (res.data.success) {
-                        dispatch(setUser(res.data.data.userInfo))
+                        dispatch(setUser(res.data.content))
                         history.replace(redirectUrl)
+                    } else {
+                        // 使用dom操作更新验证码
+                        document.getElementById("codeImg")?.click()
                     }
                 })
                 .catch(() => {
@@ -192,6 +193,7 @@ const LoginPage: React.FC<LoginProps> = function ({
                                 onPressEnter={handleSubmit}
                                 suffix={
                                     <img
+                                        id="codeImg"
                                         src={captchaUrl}
                                         className="captcha"
                                         onClick={reloadCaptcha}
