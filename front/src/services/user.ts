@@ -5,6 +5,11 @@ export function serviceLogin(data: object) {
   return http.post('/api/login', data)
 }
 
+// 注册账号密码
+export function serviceRegister(data: object) {
+    return http.post('/api/register', data)
+}
+
 // 通过token登录
 export function serviceLoginByToken(token: string) {
   return http.get('/accessToken', {

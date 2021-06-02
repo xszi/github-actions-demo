@@ -19,10 +19,10 @@ function handleError(error: AxiosError) {
         console.log(error)
     } else {
         const response = error.response
-        notification.error({
-            message: `Error Code: ${response?.status ?? -1}`,
-            description: response?.statusText ?? '服务器出小差'
-        })
+        // notification.error({
+        //     message: `Error Code: ${response?.status ?? -1}`,
+        //     description: response?.statusText ?? '服务器出小差'
+        // })
     }
 }
 
@@ -67,10 +67,10 @@ httpInstance.interceptors.response.use(function (res) {
     const data: RespData = res.data
 
     if (!data.success && headers.errorAlert) {
-        notification.error({
-            message: `错误码: ${data.errorCode ?? -1}`,
-            description: data.msg ?? '服务器出小差'
-        })
+        // notification.error({
+        //     message: `错误码: ${data.errorCode ?? -1}`,
+        //     description: data.msg ?? '服务器出小差'
+        // })
     }
 
     if (data.success && headers.successAlert) {
