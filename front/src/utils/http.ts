@@ -34,7 +34,7 @@ const httpInstance = axios.create({
 httpInstance.defaults.headers.common.isLoading = true
 httpInstance.defaults.headers.common.successAlert = false
 httpInstance.defaults.headers.common.errorAlert = true
-httpInstance.defaults.withCredentials = true
+// httpInstance.defaults.withCredentials = true
 Object.setPrototypeOf(httpInstance, axios)
 
 httpInstance.interceptors.request.use(function (config) {

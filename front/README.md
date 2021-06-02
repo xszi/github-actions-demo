@@ -7,3 +7,15 @@
 
 
 身份证（D&Ｍ）
+
+React的class类组件和函数式组件：
+
+class类组件：
+
+* 使用this，普通的调用方法
+* 不使用Hooks
+
+函数式组件：
+
+* 不使用this
+* 使用hooks

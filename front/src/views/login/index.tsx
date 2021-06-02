@@ -214,6 +214,7 @@ const LoginPage: React.FC<LoginProps> = function ({
                     >
                         {loading ? '登 录 中...' : '登 录'}
                     </Button>
+                    
                     <div className="register">
                         <Popover
                             content={PopoverContent}
@@ -223,16 +224,17 @@ const LoginPage: React.FC<LoginProps> = function ({
                             <span>注册账号</span>
                         </Popover>
                     </div>
+                    
                     {/* <Button
-            style={{ marginTop: '20px' }}
-            size="large"
-            loading={loading}
-            block
-            icon={<GithubOutlined />}
-            onClick={githubHandler}
-          >
-            使用 Github 登录
-          </Button> */}
+                        style={{ marginTop: '20px' }}
+                        size="large"
+                        loading={loading}
+                        block
+                        icon={<GithubOutlined />}
+                        onClick={githubHandler}
+                    >
+                        使用 Github 登录
+                    </Button> */}
                 </div>
             </div>
             <Footer />
