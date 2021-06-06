@@ -20,5 +20,3 @@ class类组件：
 * 不使用this
 * 使用hooks
 
-
-### 面向类型编程：`Typescript` 中的高级类型
